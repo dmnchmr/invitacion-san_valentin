@@ -32,7 +32,7 @@ function ocultarDivPregunta() {
     divSi.style.display = "flex"; 
 }
 
-let tamañoActual = 100;
+let tamañoActual = 140;
 botonNo.addEventListener("click", sumarYCambiarTamañoBtnSi);
 
 function sumarYCambiarTamañoBtnSi() {
