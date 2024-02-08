@@ -1,0 +1,202 @@
+* {
+    margin: auto;
+    user-select: none;
+}
+
+:root {
+    --bg-color: #F1DEC9;
+    --main-color-light: #C8B6A6;
+    --second-color-dark: #3E3232;
+    --text-color: #8D7B68;
+    --no-color: #c54545;
+    --si-color: #7fbb94;
+    --fuente-principal: "Pacifico", cursive;
+    --fuente-titulos: "Gamja Flower", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-family: var(--fuente-principal);
+    color: var(--text-color);
+}
+
+.botonRecarga {
+    font-size: calc(30px + (40 - 30) * ((100vw - 368px) / (1920 - 368)));
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--text-color);
+    text-align: center;
+    align-self: center;
+    padding: 3rem;
+}
+
+/* hello div */
+.hello {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: var(--fuente-titulos);
+    font-size: calc(60px + (85 - 60) * ((100vw - 368px) / (1920 - 368)));
+    user-select: none;
+    text-align: center;
+}
+
+span {
+    color: var(--second-color-dark);
+}
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+}
+
+.hello--img {
+    width: 70%;
+}
+
+/* message div */
+.message {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    display: none;
+}
+
+.message article {
+    font-size: calc(18px + (30 - 18) * ((100vw - 368px) / (1920 - 368)));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.message--img {
+    width: 50%;
+}
+
+.btnContinuar,
+.btnPregunta {
+    position: relative;
+    overflow: hidden;
+    font-size: calc(15px + (25 - 15) * ((100vw - 368px) / (1920 - 368)));
+    cursor: pointer;
+    font-family: var(--fuente-principal);
+    color: var(--text-color);
+    border: none;
+    background-color: transparent;
+/*     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; */
+}
+
+.btnContinuar::after,
+.btnPregunta::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+    animation: underlineAnimation 2s infinite;
+}
+
+@keyframes underlineAnimation {
+    0%, 100% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+}
+
+/* Pregunta div */
+.pregunta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    width: 90%;
+    max-width: 600px;
+    display: none;
+}
+
+.pregunta div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 2rem;
+    width: 100%;
+}
+
+.pregunta p {
+    font-size: calc(18px + (30 - 18) * ((100vw - 368px) / (1920 - 368)));
+    text-align: center;
+}
+
+.pregunta button {
+    width: 120px;
+    height: 120px;
+    font-size: calc(15px + (25 - 15) * ((100vw - 368px) / (1920 - 368)));
+    cursor: pointer;
+    font-family: var(--fuente-principal);
+    text-align: center;
+    border-radius: 10%;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.pregunta .btnSi {
+    color: #070001;
+    background-color: var(--si-color);
+}
+
+.pregunta .btnNo {
+    color: #070001;
+    background-color: var(--no-color);
+}
+
+.pregunta button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btnSi:hover,
+.btnNo:hover {
+    background-color: var(--si-color);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* divSí */
+.si {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    display: none;
+}
+
+.si h3 {
+    font-size: calc(18px + (30 - 18) * ((100vw - 368px) / (1920 - 368)));
+    text-align: center;
+    font-weight: lighter;
+}
